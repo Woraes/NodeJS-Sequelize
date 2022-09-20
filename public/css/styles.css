@@ -13,7 +13,7 @@ form{
 
 body{
     background-color: rgb(32, 31, 31);
-    color: rgb(138, 138, 138);
+    color: rgb(0, 0, 0);
     padding: 5px;
     margin: 0;
 }
@@ -27,6 +27,7 @@ body{
 .card{
     padding: 8px;
     margin-bottom: 5px;
+    background-color: rgb(187, 187, 187);
 
 }
 
@@ -34,10 +35,25 @@ body{
     font-weight: bold;
 }
 
-.livros-container{
-    border-bottom: 1px solid #ccc;
-    padding: 5px;
-    margin: 5px;
+
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+
+}
+.list-item {
+    
+    border: 1px;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 1 25%;
+    color: antiquewhite;
+    background-color: rgb(65, 65, 65);
 
 
 }
@@ -55,3 +71,10 @@ body{
     
 }
 
+.card-body-viewuserh2,
+.card-body-viewuser h3,
+.card-body-viewuser p{
+   
+    margin-bottom: .8em;
+    
+}

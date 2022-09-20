@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body-viewuser">
+   <h2>Detalhes de Usuários</h2>
+   <h3>Nome: {{user.nome}}</h3>
+   <p>E-mail: {{user.email}}</p>
+   <p>CPF: {{user.cpf}}</p>
+   <p> Profissão: {{user.ocupacao}}</p>
+
+
+  </div>
+  <div>
+      
+      <form action="/users/delete/{{user.id}}" method="post" >
+        <a class="btn btn-dark" href="/list">Voltar</a>
+        <a class="btn btn-warning" href="/users/edit/{{user.id}}">Editar</a>
+        
+        <button type="submit" value="Excluir" class="btn btn-danger">Excluir</button>
+      </form>
+
+  </div>
+</div>

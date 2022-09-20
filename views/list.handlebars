@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+   <h2>Lista de Usuários</h2>
+   <a href="/users/create" class="btn btn-success">Cadastrar Novo Usuário</a>
+   <a class="btn btn-dark" href="/">Voltar</a>
+
+  </div>
+  {{#each users}}
+  <div class="container">
+    
+    <div class="list-item">
+    #{{this.id}} - <span class="bold"> {{this.nome}}</span> - CPF: {{this.cpf}}
+ 
+    
+
+    </div>
+
+ 
+    <a class="btn btn-warning" href="/users/{{this.id}}">Detalhes</a>
+    
+    
+  </div>
+
+  {{/each}}
+</div>

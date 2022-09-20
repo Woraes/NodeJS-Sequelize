@@ -1,0 +1,84 @@
+<div class="card">
+    <h2>Editando:{{user.nome}}</h2>
+  <div class="card-body">
+    <form action="/users/update" method="post" >
+    <input type="hidden" name="id" value="{{user.id}}">
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome:</label>
+    <input type="text" class="form-control" name="nome" value="{{user.nome}}" aria-describedby="" placeholder="Digite seu Nome...">
+    <div id="" class="form-text">*Dados obrigatórios</div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail:</label>
+    <input type="email" class="form-control" id="" name="email" value="{{user.email}}" placeholder="Digite seu e-mail...">
+    <div id="" class="form-text">*Dados obrigatórios</div>
+  </div>
+  <div class="mb-3">
+    <label for="cpf" class="form-label">CPF:</label>
+    <input type="text" class="form-control" name="cpf" value="{{user.cpf}}" aria-describedby="" placeholder="Digite seu CPF...">
+    <div id="" class="form-text">*Dados obrigatórios </div>
+  </div>
+  <div class="mb-3">
+    <label for="ocupacao" class="form-label">Ocupação:</label>
+    <input type="text" class="form-control" name="ocupacao" value="{{user.ocupacao}}" aria-describedby="" placeholder="Digite sua Profissão...">
+    <div id="" class="form-text">*Dados obrigatórios </div>
+  </div>
+  <div class="form-check">
+    {{#if user.status}}
+  <input class="form-check-input" type="checkbox" name="status"   checked>
+    {{else}}
+  <input class="form-check-input" type="checkbox" name="status"   >
+    {{/if}}
+  <label class="form-check-label" for="flexCheckChecked">Ativar</label>
+</div>
+  
+  <button type="submit" class="btn btn-success">Salvar</button>
+  <a class="btn btn-dark" href="/list">Cancelar</a>
+</form>
+
+ <div class="card">
+    <h2>Cadastrando Endereços</h2>
+  <div class="card-body">
+    <form action="/address/create" method="post" >
+    <input type="hidden" name="UserId" value="{{user.id}}">
+  <div class="mb-3">
+    <label for="nome" class="form-label">Rua:</label>
+    <input type="text" class="form-control" name="rua" aria-describedby="" placeholder="Digite sua rua...">
+    <div id="" class="form-text">*Dados obrigatórios</div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Bairro:</label>
+    <input type="text" class="form-control" id="" name="bairro" placeholder="Digite seu bairro...">
+    <div id="" class="form-text">*Dados obrigatórios</div>
+  </div>
+  <div class="mb-3">
+    <label for="cpf" class="form-label">Numero:</label>
+    <input type="text" class="form-control" name="numero" aria-describedby="" placeholder="Digite o numero da residencia...">
+    <div id="" class="form-text">*Dados obrigatórios </div>
+  </div>
+  <div class="mb-3">
+    <label for="ocupacao" class="form-label">CEP:</label>
+    <input type="text" class="form-control" name="cep" aria-describedby="" placeholder="Digite seu CEP...">
+    <div id="" class="form-text">*Dados obrigatórios </div>
+  </div>
+
+</div>
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <a class="btn btn-dark" href="/">Cancelar</a>
+</form>
+    
+   
+  </div>
+</div>   
+   
+  </div>
+</div>
+<div class="card">
+    <h2>Endereços registrados</h2>
+    
+  <div class="card-body">
+    {{#each user.Endes}}
+    <p>Rua:{{this.cep}} - </p>
+    {{/each}}
+  </div>  
+</div>    
